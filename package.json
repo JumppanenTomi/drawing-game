@@ -1,0 +1,16 @@
+{
+  "name": "drawing-game",
+  "version": "0.0.1",
+  "description": "Scribbl.io alternative",
+  "main": "index.js",
+  "author": "Tomi Jumppanen",
+  "private": true,
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.17.1",
+    "socket.io": "~2.3.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
