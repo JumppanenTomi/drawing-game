@@ -5,12 +5,23 @@
   "main": "index.js",
   "author": "Tomi Jumppanen",
   "private": true,
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "express": "~4.17.1",
     "socket.io": "~2.3.0"
   },
   "scripts": {
     "start": "node index.js"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumppanenTomi/drawing-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JumppanenTomi/drawing-game/issues"
+  },
+  "homepage": "https://github.com/JumppanenTomi/drawing-game#readme"
 }
