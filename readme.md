@@ -1,4 +1,7 @@
 # Drawing Game
+## About
+Idea of app can simply be shrunk to one sentence, Online multiplayer draw and guess.
+
 ## Node.js
 To start the game server, you need to install Node.js. You can get the latest version [***here***](https://nodejs.org/en/).
 
