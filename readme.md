@@ -1,42 +1,42 @@
-# Piirtopeli
+# Drawing Game
 ## Node.js
-Käynnistääksesi peliserverin, sinun tulee asentaa Node.js. Jonka uusimman version saat [***täältä***](https://nodejs.org/en/)
+To start the game server, you need to install Node.js. You can get the latest version [***here***](https://nodejs.org/en/).
 
-## Tekstieditori
-Jos sinua kiinnostaa pelin kehitys/modaaminen niin sinulla tulisi olla hyvä tekstieditori kuten, [***Visual Studi Code***](https://code.visualstudio.com/). Siinä on itsessään monia hyviä työkaluja ja siihen myös löytyy paljon lisäosia jotka helpottavat pelinkehitystä.
+## Text Editor
+If you are interested in game development/modification, you should have a text editor, such as [***Visual Studio Code***](https://code.visualstudio.com/). It comes with many useful tools and has numerous extensions that facilitate game development.
 
-## Node paketit
+## Node Packages
 
-Asentaaksesi node moduulit peliin sinun tulee avata piirtopeliohjelma-kansio komentokehotteessa. Se tapahtuu kirjoittamalla
+To install node modules for the game, navigate to the drawing game program folder in the command prompt by typing:
 ```sh
-cd "C:/kansion polku/"
+cd "C:/path/to/the/folder/"
 ```
-Sitten ollaankin valmiita asentamaan node paketit:
+Now, you are ready to install the node packages:
 ```sh
 npm install
 ```
-Odottele asennuksen päättymistä ja kirjoita:
+Wait for the installation to complete, and then type:
 ```sh
 npm start
 ```
-Komentokehotteen tulisi nyt printata:
+The command prompt should now print:
 ```sh
-Serveri portissa 3000 toimii!
+Server running on port 3000!
 ```
-Serverin sammutus, tapahtuu tekemällä seuraava näppäinyhdistelmä kahdesti: CTRL+C
+To shut down the server, press CTRL+C twice.
 
-## Portin vaihto
-Tiedostossa index.js, rivillä 7 määritellään sovelluksen portti numero. Muuttamalla lukua saat muutettua porttia (serveriin tehtävät muutokset vaativat aina sen uudelleen käynnistyksen)
+## Changing the Port
+In the file index.js, on line 7, the application's port number is defined. By changing this number, you can alter the port (changes to the server require a restart).
 
-## Tiedossa  olevat bugit
-- Piirtäjä voi viedä jonkun toisen vastausvuoron, kirjoittamalla itse vastauksen chattiin.
-- Piirtäjän generoidessa uusi sana, luulee serveri kierroksen vaihtuneen, joten serveri lisää uuden kierroksen laskuriin.
-- Samalla pelaajanimellä pelaavat kohtaavat monia erilaisia ongelmia.
-- Pelaajat voivat häiritä piirtäjää poistamalla inspect-elementillä ***draw-block***-nimisen elementin, jolloin he myös voivat piirtää.
-- Muuttamalla koodia saa näkyviin oikean sanan. Korjaus tullaan tekemään siirtämällä viestin tarkistus serverin puolelle. (Muuttamalla JavaScript koodia voidaan tehdä muitakin muutoksia, jotka myös tullaan korjaamaan samalla tavalla.)
+## Known Bugs
+- The drawer can take someone else's turn by typing their own answer in the chat.
+- When the drawer generates a new word, the server thinks the round has changed, leading to an incorrect increment in the round counter.
+- Players with the same name encounter various issues.
+- Players can disrupt the drawer by removing the ***draw-block*** element using inspect element, allowing them to draw as well.
+- Modifying the code reveals the correct word. The fix will involve moving the message check to the server side. (Other code modifications will also be addressed in the same way.)
 
-## Tulevaisuuden parannuksia
-- Pelin tietoturvaa tullaan parantamaan muuttamalla serverin ja "client":in ohjelmistorakennetta.
-- Kirjautuminen tullaan muuttaamaan "kertakäyttöisen" käyttäjätilin sijaan, tietokantaan talletettavaan käyttäjätiliin (Tällä tavoin saadaan myös korjattua bugi, jossa samalla käyttäjänimellä pelaavat kohtaavat pelissä ongelmia).
-- Käyttäjätili sidonnainen pistejärjestelmä.
-- Suurempi väripaletti
+## Future Improvements
+- Enhance game security by restructuring the server and client software.
+- Change login to a database-stored account instead of a "one-time" user account (fixing the issue where players with the same username face problems).
+- Implement a user-account tied scoring system.
+- Expand the color palette for more drawing options.
